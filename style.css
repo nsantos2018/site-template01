@@ -1,0 +1,145 @@
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+.header__main{
+    background-color: #ccc;
+}
+
+.header__menu{
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__menu .header__logo{
+
+}
+
+.header__menu .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+.header__menu .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 2s ease infinite;
+}
+.header__menu .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+.header__menu .hamburger .bar::after,
+.header__menu .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+.header__menu .hamburger .bar::after {
+	top: 8px;
+}
+.header__menu .hamburger .bar::before {
+	bottom: 8px;
+}
+.header__menu .hamburger.active .bar::before {
+	bottom: 0;
+}
+.header__menu .hamburger.active .bar::after {
+	top: 0;
+}
+
+
+.header__menu .menu__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.header__menu .menu__list{
+    list-style: none;
+    background: #c3ffdc;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s ease left;
+    position: absolute;
+}
+
+
+
+
+
+.footer__main{
+    background-color: #ccc;
+}
+
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+   
+    /*header*/
+    .header__menu .menu__list{
+        position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+    }
+
+    .header__menu .menu__list .menu-item{
+        display: inline-block;
+    }
+
+    .header__menu .menu__list .menu-item a{
+        font-size: 1rem;
+    }
+
+    .header__menu .menu__list .menu-item a:after {
+		display: none;
+	} 
+}
