@@ -82,26 +82,44 @@
 
 }
 
-.header__menu .menu__list{
+.header__menu .menu__list {
     list-style: none;
-    background: #c3ffdc;
+    background: rgba(0,0,0,.95);
     width: 100vw;
     height: 100vh;
     left: 100%;
     top: 0;
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    z-index: 1;
-    overflow-x: hidden;
-    transition: 0.5s ease left;
+    align-items: center;    
+    overflow-x: hidden;    
+    padding: 0;
     position: absolute;
+    transition: 0.5s ease left;
+    z-index: 1;
 }
 
+.header__menu .menu__list.active {
+    left: 20%;
+}
 
+.menu__list .menu-item{
+    background-color: rgba(255,255,255, 0.1);
+    border-bottom: 1px solid #424242;
+    display: block;
+    margin: 0.2rem 0;
+    padding: 1rem;
+    position: relative;
+}
 
-
+.menu-item .sub-menu{
+    max-height: 0;
+    opacity: 0%;
+    visibility: hidden;
+    transition: all .5s;
+    padding: 0;
+}
 
 .footer__main{
     background-color: #ccc;
