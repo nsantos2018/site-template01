@@ -1,5 +1,5 @@
 const hamburger = document.querySelector('.header__menu .hamburger');
-const menu_mobile = document.querySelector('.header__menu .menu__list');
+const menu_mobile = document.querySelector('.header__menu .menu__nav');
 
 hamburger.addEventListener('click', () => {
     /**/
