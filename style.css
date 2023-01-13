@@ -67,11 +67,18 @@
 .header__menu .hamburger .bar::before {
 	bottom: 8px;
 }
+
+.header__menu .hamburger.active .bar{
+    background-color: #222222;
+}
+
 .header__menu .hamburger.active .bar::before {
 	bottom: 0;
+    transform: rotate(45deg);
 }
 .header__menu .hamburger.active .bar::after {
 	top: 0;
+    transform: rotate(130deg);
 }
 
 
@@ -120,21 +127,13 @@
     left: 20%;
 } */
 
-.menu__list .menu-item{
+.menu__list > .menu-item{
     background-color: rgba(255,255,255, 0.1);
     border-bottom: 1px solid #424242;
     display: block;
     margin: 0.2rem 0;
     padding: 1rem;
     position: relative;
-}
-
-.menu-item .sub-menu{
-    max-height: 0;
-    opacity: 0%;
-    visibility: hidden;
-    transition: all .5s;
-    padding: 0;
 }
 
 .menu__list .menu-item a{
@@ -145,15 +144,15 @@
     text-decoration: none;
 }
 
-.menu__list .menu-item a.active::before{
+ .menu__list .menu-item.menu-item-has-children a.active::before{
     content: "";
     background-color: #f6572b;
-    width: 5px;
+    width: .4rem;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-}
+} 
 
 .menu__list .menu-item.menu-item-has-children > a::after{
     /*content: '\F284';
@@ -177,8 +176,53 @@
     -webkit-font-smoothing: antialiased;
     /*transform: rotate(270deg);*/
     transform: rotate(0);
-    transition: transform .3s;    
+    transition: transform .3s;  
+    z-index: 10;  
 }
+
+.menu__list .menu-item-has-children > .sub-menu{
+    cursor: pointer;
+    transform:translateX(1rem);
+    z-index: 999;
+}
+
+.menu__list .menu-item-has-children > .sub-menu .arrow{
+    top: 1rem;
+    left: 1rem;
+}
+
+.menu__list .menu-item-has-children > a.arrow::after{
+    transform: rotate(270deg);
+    transition: transform .3s;
+}
+
+.menu__list .menu-item-has-children a.show ~ .sub-menu{
+    max-height: 100vh;
+    margin-top: 1rem;
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s;
+}
+
+.menu-item .sub-menu{
+    max-height: 0;
+    opacity: 0%;
+    visibility: hidden;
+    transition: all .5s;
+    padding: 0;
+}
+
+.menu__list .menu-item .sub-menu .menu-item{
+    background-color: #333;
+    border-bottom: 1px solid #101010;
+    display: block;
+    /* margin: 0.1rem 0; */
+    padding: .8rem;
+    position: relative;
+    /* opacity: 100%; */
+}
+
+
 
 .footer__main{
     background-color: #ccc;
