@@ -244,6 +244,20 @@
 @media only screen and (min-width: 1200px) {
    
     /*header*/
+
+    /* Menu Bar */
+    .header__menu .hamburger {
+/*        display: none;*/
+    }
+
+    .menu__nav{
+        left: 0;
+    }
+
+    .menu__nav .menu__label {
+        display: none;
+    }
+
     .header__menu .menu__list{
         position: initial;
 		display: block;
@@ -253,14 +267,17 @@
     }
 
     .header__menu .menu__list .menu-item{
-        display: inline-block;
+        /*display: inline-block;*/
+        display: inline-flex;
+        width: fit-content;
     }
+    
 
     .header__menu .menu__list .menu-item a{
         font-size: 1rem;
     }
 
-    .header__menu .menu__list .menu-item a:after {
+    /*.header__menu .menu__list .menu-item a:after {
 		display: none;
-	} 
+	} */
 }
