@@ -112,15 +112,12 @@
 }
 
 .header__menu .menu__list {
-    list-style: none;
-    
+    list-style: none;    
     display: block;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
-        
-    padding: 0;
-    
+    align-items: center; 
+    padding: 0;    
 }
 
 /* .header__menu .menu__list.active {
@@ -155,14 +152,6 @@
 } 
 
 .menu__list .menu-item.menu-item-has-children > a::after{
-    /*content: '\F284';
-    font-weight: 900;
-    font-family: "Roboto";
-    margin-left: 0.5rem;
-    display: inline-block;
-    transform: rotate(90deg);
-    transition: transform .3s;*/
-
     content: "\f284";/* <i class="bi bi-chevron-left"></i> */
     display: inline-block;
     font-family: bootstrap-icons !important;
@@ -182,7 +171,8 @@
 
 .menu__list .menu-item-has-children > .sub-menu{
     cursor: pointer;
-    transform:translateX(1rem);
+    transform:translateX(.2rem);
+    transform: translateY(1rem);
     z-index: 999;
 }
 
@@ -192,13 +182,13 @@
 }
 
 .menu__list .menu-item-has-children > a.arrow::after{
-    transform: rotate(270deg);
+    transform: rotate(-90deg);
     transition: transform .3s;
 }
 
 .menu__list .menu-item-has-children a.show ~ .sub-menu{
     max-height: 100vh;
-    margin-top: 1rem;
+    /* margin-top: 1rem;     */
     opacity: 1;
     visibility: visible;
     transition: all .5s;
@@ -222,7 +212,9 @@
     /* opacity: 100%; */
 }
 
-
+.menu__list .menu-item .sub-menu .menu-item:nth-last-child(1){    
+    margin-bottom: 1rem;
+}
 
 .footer__main{
     background-color: #ccc;
@@ -307,7 +299,8 @@
         background-color: #fff;
         /* position: absolute; */
         position: fixed;
-        margin-top: 1.9rem;
+        /* margin-top: 1.9rem; */
+        /* transform: translateY(10rem); */
     }
 
     .menu__list .menu-item-has-children a.show ~ .sub-menu {       
@@ -320,7 +313,7 @@
     }
 
     .menu__list .menu-item:hover > .sub-menu {
-        transform: translate(0, 0);
+        transform: translate(0, 1.5rem);
         opacity: 1;
         visibility: inherit;
         pointer-events: auto;
@@ -328,12 +321,13 @@
     }
 
     .menu__list .menu-item.menu-item-has-children:hover > a::after {        
-        transform: rotate(270deg);        
+        transform: rotate(-90deg);        
     }
 
     .menu__list .sub-menu .menu-item-has-children > .sub-menu{        
         position: absolute;
-        left: 9rem;
+        /* left: 9rem; */
+        transform: translateX(8.5rem);
         top: 0;
         width: max-content;
     }
