@@ -3,10 +3,40 @@
     --black:#192a56;
     --light-color:#666;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+    --hamburger-color: #fff;
+    --hamburger-bar-color: #222;
+    --header-bar-color: #000;
+    --menu-nav-color:  rgba(0,0,0,.95);
+    --menu-label-color: #888;
+    
+    /* Menu Item Level 1*/
+    --menu-bgl1-color: rgba(255,255,255, 0.1);
+    --menu-bgl1-border: 1px solid #424242;
+    --menu-link1-color: #fff;
+    --menu-link-active: #f6572b;
+    --menu-link-hover: #fff098; 
+
+    /* Menu Item Level 2*/
+    --menu-bgl2-color: #333;
+    --menu-bgl2-border: 1px solid #101010;
+    --menu-bgl2-hover: #222;
+
+    /* Menu Item Level 3*/
+    --menu-bgl3-color: #333;
+    --menu-bgl3-border: 1px solid #101010;
+    --menu-bgl3-hover: #222;
+
+    /* Footer */
+    --footer-bg-color: #ccc;
+}
+
+.fully__page main{
+    min-height: 100vh;
 }
 
 .header__main{
-    background-color: #ccc;
+    background-color: var(--header-bar-color);
 }
 
 .header__menu{
@@ -23,7 +53,8 @@
 	height: 60px;
 	width: 60px;
 	display: inline-block;
-	border: 3px solid white;
+	/* border: 3px solid white; */
+    border: 3px solid var(--hamburger-color);
 	border-radius: 50%;
 	position: relative;
 	display: flex;
@@ -40,14 +71,14 @@
 	height: 100%;
 	width: 100%;
 	border-radius: 50%;
-	border: 3px solid white;
+	border: 3px solid var(--hamburger-color);
 	animation: hamburger_puls 2s ease infinite;
 }
 .header__menu .hamburger .bar {
 	height: 2px;
 	width: 30px;
 	position: relative;
-	background-color: white;
+	background-color: var(--hamburger-color);
 	z-index: -1;
 }
 .header__menu .hamburger .bar::after,
@@ -57,7 +88,7 @@
 	height: 100%;
 	width: 100%;
 	left: 0;
-	background-color: white;
+	background-color: var(--hamburger-color);
 	transition: 0.3s ease;
 	transition-property: top, bottom;
 }
@@ -69,7 +100,7 @@
 }
 
 .header__menu .hamburger.active .bar{
-    background-color: #222222;
+    background-color: var(--hamburger-bar-color);
 }
 
 .header__menu .hamburger.active .bar::before {
@@ -90,7 +121,7 @@
 }
 
 .menu__nav{
-    background: rgba(0,0,0,.95);
+    background: var(--menu-nav-color);
     width: 100vw;
     height: 100vh;
     left: 100%;
@@ -106,7 +137,7 @@
 }
 
 .menu__nav .menu__label{
-    color: #8b8b8b;
+    color: var(--menu-label-color);
     font-size: 1.5rem;
     padding: 0.7rem 1rem;
 }
@@ -125,8 +156,8 @@
 } */
 
 .menu__list > .menu-item{
-    background-color: rgba(255,255,255, 0.1);
-    border-bottom: 1px solid #424242;
+    background-color: var(--menu-bgl1-color);
+    border-bottom: var(--menu-bgl1-border);
     display: block;
     margin: 0.2rem 0;
     padding: 1rem;
@@ -135,7 +166,7 @@
 
 .menu__list .menu-item a{
     line-height: 1;
-    color: #fff;
+    color: var(--menu-link1-color);
     font-size: .95rem;
     letter-spacing: 1px;  
     text-decoration: none;
@@ -143,7 +174,7 @@
 
  .menu__list .menu-item.menu-item-has-children a.active::before{
     content: "";
-    background-color: #f6572b;
+    background-color: var(--menu-link-active);
     width: .4rem;
     height: 100%;
     position: absolute;
@@ -203,8 +234,8 @@
 }
 
 .menu__list .menu-item .sub-menu .menu-item{
-    background-color: #333;
-    border-bottom: 1px solid #101010;
+    background-color: var(--menu-bgl2-color);
+    border-bottom: var(--menu-bgl2-border);
     display: block;
     /* margin: 0.1rem 0; */
     padding: .8rem;
@@ -217,7 +248,7 @@
 }
 
 .footer__main{
-    background-color: #ccc;
+    background-color: var(--footer-bg-color);
 }
 
 /* Keyframes */
@@ -237,8 +268,11 @@
    
     /*header*/
 
-    .header__menu .header__logo{
-        /* background-color: #192a56; */
+    .header__main {
+        background-color: var(--header-bar-color);
+    }
+
+    .header__menu .header__logo{        
         max-width: 10rem;
         margin: 0 1rem 0 0;
     }
@@ -249,7 +283,8 @@
     }
 
     .menu__nav{
-        background: rgba(33, 0, 65, 0.95);
+        --menu-nav-color: transparent;
+        background: var(--menu-nav-color);
         width: 100%;
         height: auto;
         /* left: 0; */
@@ -269,8 +304,7 @@
     .header__menu .menu__list > .menu-item{
         /*display: inline-block;*/
         display: inline-flex;
-        width: fit-content;
-        background-color: #666;
+        width: fit-content;        
     }    
 
     /* .header__menu .menu__list .menu-item a{
@@ -279,28 +313,31 @@
 
     /*select 1º level menu*/
     .menu__list > .menu-item {
-        background-color: rgba(255,255,255, 0.1);
-        border-bottom: 1px solid #424242;
+        --menu-bgl1-color: transparent;
+        --menu-bgl1-border: none;
+        background-color: var(--menu-bgl1-color);
+        border-bottom: var(--menu-bgl1-border);
         display: block;
         margin: 0.1rem 0;
         padding: .5rem;
         position: relative;
     }
+    
+    .header__menu .menu__list > .menu-item:hover{
+        /* background-color: #2c2c2c; */
+    }
 
     .header__menu .menu__list > .menu-item > a{
-        background-color: #27ae60;
+        /* background-color: #27ae60; */
     }
 
     .header__menu .menu__list > .menu-item > a:hover{
-        background-color: #ae7f27;
+        color: var(--menu-link-hover);
+        /* background-color: #ae7f27; */
     }
 
-    .menu__list > .menu-item > .sub-menu{
-        background-color: #fff;
-        /* position: absolute; */
-        position: fixed;
-        /* margin-top: 1.9rem; */
-        /* transform: translateY(10rem); */
+    .menu__list > .menu-item > .sub-menu{        
+        position: fixed;        
     }
 
     .menu__list .menu-item-has-children a.show ~ .sub-menu {       
@@ -317,7 +354,6 @@
         opacity: 1;
         visibility: inherit;
         pointer-events: auto;
-        background-color: red;
     }
 
     .menu__list .menu-item.menu-item-has-children:hover > a::after {        
@@ -332,11 +368,23 @@
         width: max-content;
     }
 
+    /*Menu Level 2 */
+    .menu__list .menu-item-has-children .sub-menu .menu-item {
+        background-color: var(--menu-bgl2-color);
+        border-bottom: var(--menu-bgl2-border);
+    }
+
+    .menu__list .menu-item-has-children .sub-menu .menu-item:hover{
+        background-color: var(--menu-bgl2-hover);
+    }
+
+    /* Menu Level 3*/
     .menu__list .sub-menu .menu-item-has-children > .sub-menu .menu-item{
-        background: #192a56;
+        background-color: var(--menu-bgl3-color);
     }  
 
-    /*.header__menu .menu__list .menu-item a:after {
-		display: none;
-	} */
+    .menu__list .sub-menu .menu-item-has-children > .sub-menu .menu-item:hover{
+        background-color: var(--menu-bgl3-hover);
+    }
+
 }
