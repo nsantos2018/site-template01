@@ -135,7 +135,7 @@
     /* position: absolute; */
     position: fixed;
     transition: 0.5s ease left;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu__nav.active{
@@ -260,6 +260,7 @@
 .slider__title{
     font-size: 1rem;
     padding: 0 1rem;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
 }
 
 .slider__title--white{
@@ -275,7 +276,38 @@
     color: #fff;
 }
 
+/* Sec Registration Form
+------------------------------------------------------------*/
+.sec__hero{
+    background-image: url(img/bg-1.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+    /* min-height: 500px; */
+}
 
+.hero__grid{
+    display: grid;
+    place-items: center;   
+}
+
+.hero__grid--border{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.hero__card{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: clamp(200px, 100%, 400px);
+}
+
+.hero__content{}
+.hero__content--padding{
+    padding: 2rem 0;
+}
 
 .footer__main{
     background-color: var(--footer-bg-color);
@@ -426,4 +458,10 @@
     .slider__text{
         font-size: 1.2rem;       
     }
+
+    /* Sec hero */
+    .hero__content--padding{
+        padding: 0 2rem;
+    }
+
 }
