@@ -132,7 +132,8 @@
     left: 100%;
     top: 0;
     overflow-x: hidden;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
     transition: 0.5s ease left;
     z-index: 1;
 }
@@ -251,6 +252,30 @@
 .menu__list .menu-item .sub-menu .menu-item:nth-last-child(1){    
     margin-bottom: 1rem;
 }
+
+
+/* Slider
+------------------------------------------------------------*/
+.sec__slider{}
+.slider__title{
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.slider__title--white{
+    color: #fff ;
+}
+
+.slider__text{
+    font-size: .8rem;
+    padding: 1rem;
+}
+
+.slider__text--white{
+    color: #fff;
+}
+
+
 
 .footer__main{
     background-color: var(--footer-bg-color);
@@ -392,4 +417,13 @@
         background-color: var(--menu-bgl3-hover);
     }
 
+    /* Slider
+    -----------------------*/
+    .slider__title{
+        font-size: 2.2rem;        
+    }       
+    
+    .slider__text{
+        font-size: 1.2rem;       
+    }
 }
