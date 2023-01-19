@@ -276,7 +276,7 @@
     color: #fff;
 }
 
-/* Sec Registration Form
+/* Sec Hero
 ------------------------------------------------------------*/
 .sec__hero{
     background-image: url(img/bg-1.jpg);
@@ -292,11 +292,6 @@
     place-items: center;   
 }
 
-.hero__grid--border{
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 0.25rem;
-}
-
 .hero__card{
     display: flex;
     flex-direction: column;
@@ -304,10 +299,48 @@
     width: clamp(200px, 100%, 400px);
 }
 
+.hero__card--border{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+
 .hero__content{}
 .hero__content--padding{
     padding: 2rem 0;
 }
+
+
+/* Sec About
+------------------------------------------------------------*/
+.sec__about{
+    /* background: #666; */
+    background: linear-gradient(to bottom right, rgb(207, 207, 207), rgb(250, 250, 250));
+}
+
+
+/* Sec Service
+------------------------------------------------------------*/
+.sec__service{
+
+}
+
+
+
+/* Sec 
+------------------------------------------------------------*/
+
+/* Sec 
+------------------------------------------------------------*/
+
+/* Sec 
+------------------------------------------------------------*/
+
+/* Sec 
+------------------------------------------------------------*/
+
+/* Sec 
+------------------------------------------------------------*/
 
 .footer__main{
     background-color: var(--footer-bg-color);
