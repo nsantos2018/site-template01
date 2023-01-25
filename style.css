@@ -9,26 +9,29 @@
 
     --hamburger-color: rgb(43, 43, 43);
     --hamburger-bar-color: #e7e7e7;
-    --header-bar-color: #f7f7f7);
+    --header-bar-color: #f7f7f7;
     --menu-nav-color:  rgba(245,245,245,.95);
     --menu-label-color: #888;
     
-    /* Menu Item Level 1*/
+    /* Menu Item Level 1 */
     --menu-bgl1-color: rgba(255,255,255, 0.1);
     --menu-bgl1-border: 1px solid #ccc;
     --menu-link1-color: #333;
     --menu-link-active: #f6572b;
     --menu-link-hover: #0d6efd; 
 
-    /* Menu Item Level 2*/
+    /* Menu Item Level 2 */
     --menu-bgl2-color: #f4f4f4;
     --menu-bgl2-border: 1px solid #ccc;
     --menu-bgl2-hover: #e2e2e2;
 
-    /* Menu Item Level 3*/
+    /* Menu Item Level 3 */
     --menu-bgl3-color: #eee;
     --menu-bgl3-border: 1px solid #101010;
     --menu-bgl3-hover: #e2e2e2;
+
+    /* Font utility */
+    --font-title: 'Montserrat', sans-serif;
 
     /* Footer */
     --footer-bg-color: #ccc;
@@ -260,7 +263,7 @@
 /* Global
 ------------------------------------------------------------*/
 .wrapper__title h1{    
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-title);
     width: fit-content;
     height: auto;
     margin: 0 auto;
@@ -333,15 +336,45 @@
     width: clamp(200px, 100%, 400px);
 }
 
+.hero__card h3{
+    font-family: var(--font-title);
+}
+
 .hero__card--border{
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
+    box-shadow: var(--box-shadow);
 }
 
 
 .hero__content{}
 .hero__content--padding{
     padding: 2rem 0;
+}
+
+.hero__form .form-control{
+    background: #eee;    
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.hero__form--border{
+    border: 1px solid #e1e1e1 !important;
+    border-radius: 0.2rem;
+}
+
+.hero__form .btn{
+    transition: all .3s;
+}
+
+.hero__form .btn:hover{
+    background: #0d6efd;
+    letter-spacing: .1rem;
+    transition: all .3s;
 }
 
 
@@ -355,9 +388,7 @@
 
 /* Sec Service
 ------------------------------------------------------------*/
-.sec__service{
-
-}
+.sec__service{}
 
 .service__header{}
 
@@ -398,13 +429,11 @@
     padding: .8rem;
 }
 
-.service__title{
-    
-}
+.service__title{}
 
 .service__title h2{
     font-size: 1.2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-title);
     font-weight: 600;
 }
 
@@ -419,8 +448,19 @@
     transition: all .3s;
 }
 
-/* Sec 
+/* Sec Product
 ------------------------------------------------------------*/
+.sec__product{
+    background-color: #ebebeb;
+    padding: 4rem 0;
+}
+
+.product__header{}
+.product__grid{}
+.product__list{}
+.product__unity{}
+.product__card{}
+.product__img{}
 
 /* Sec 
 ------------------------------------------------------------*/

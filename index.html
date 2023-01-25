@@ -131,18 +131,18 @@
                                 <form>
                                     <div class="mb-3">
                                         <label for="InputEmail1" class="form-label">Email</label>
-                                        <input type="email" class="form-control border border-primary" id="InputEmail1" aria-describedby="emailHelp">
+                                        <input type="email" class="form-control hero__form--border border border-primary" id="InputEmail1" aria-describedby="emailHelp">
                                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                                     </div>
                                     <div class="mb-3">
                                         <label for="InputPassword1" class="form-label">Password</label>
-                                        <input type="password" class="form-control border border-primary" id="InputPassword1">
+                                        <input type="password" class="form-control hero__form--border border border-primary" id="InputPassword1">
                                     </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input border border-primary" id="Check1">
                                         <label class="form-check-label" for="Check1">Check me out</label>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Send <i class="bi bi-send"></i></button>
                                 </form>
                             </div><!--hero__form-->
 
@@ -208,7 +208,7 @@ Praesent tellus lorem, venenatis fringilla facilisis sit amet, tempor eu augue. 
         
                 <div class="row service__list">                               
         
-                    <div class="service__unity col-lg-4 col-sm-6 mb-4">
+                    <div class="service__unity col-lg-4 col-sm-12 mb-4">
                     <div class="service__card">
                         <a href="#">
                         <img class="service__img img-fluid" src="img/service-1.jpg" alt="">
@@ -229,13 +229,13 @@ Praesent tellus lorem, venenatis fringilla facilisis sit amet, tempor eu augue. 
                                 </p>
                             </div>
                             <div class="service__link">
-                                <a href="" class="btn btn-sm btn-outline-primary border__radius--2">Ler mais</a>
+                                <a href="" class="btn btn-sm btn-outline-primary border__radius--2">read more <i class="bi bi-chevron-right"></i></a>
                             </div>
                         </div><!-- service__content -->
                     </div><!-- service__card -->
                     </div><!-- service__unity -->
         
-                    <div class="service__unity col-lg-4 col-sm-6 mb-4">
+                    <div class="service__unity col-lg-4 col-sm-12 mb-4">
                         <div class="service__card">
                             <a href="#">
                             <img class="service__img img-fluid" src="img/service-2.jpg" alt="">
@@ -256,13 +256,13 @@ Praesent tellus lorem, venenatis fringilla facilisis sit amet, tempor eu augue. 
                                     </p>
                                 </div>
                                 <div class="service__link">
-                                    <a href="" class="btn btn-sm btn-outline-primary border__radius--2">Ler mais</a>
+                                    <a href="" class="btn btn-sm btn-outline-primary border__radius--2">read more <i class="bi bi-chevron-right"></i></a>
                                 </div>
                             </div><!-- service__content -->
                         </div><!-- service__card -->
                         </div><!-- service__unity -->
 
-                        <div class="service__unity col-lg-4 col-sm-6 mb-4">
+                        <div class="service__unity col-lg-4 col-sm-12 mb-4">
                             <div class="service__card">
                                 <a href="#">
                                 <img class="service__img img-fluid" src="img/service-3.jpg" alt="">
@@ -283,7 +283,7 @@ Praesent tellus lorem, venenatis fringilla facilisis sit amet, tempor eu augue. 
                                         </p>
                                     </div>
                                     <div class="service__link">
-                                        <a href="#" class="btn btn-sm btn-outline-primary border__radius--2">Ler mais</a>
+                                        <a href="#" class="btn btn-sm btn-outline-primary border__radius--2">read more <i class="bi bi-chevron-right"></i></a>
                                     </div>
                                 </div><!-- service__content -->
                             </div><!-- service__card -->
@@ -292,7 +292,7 @@ Praesent tellus lorem, venenatis fringilla facilisis sit amet, tempor eu augue. 
                 </div><!-- row service__list -->	
                 <div class="col-xs-12 col-md-12 col-lg-12">
                     <div class="text-center pt-5 pb-5">
-                        <a href="#" class="btn btn-outline-primary width-btn border__radius--2">Ver todos os serviços</a>
+                        <a href="#" class="btn btn-outline-primary width-btn border__radius--2">See all services <i class="bi bi-chevron-double-right"></i></a>
                     </div>
                 </div><!-- col 12-->
             </div>
@@ -301,7 +301,112 @@ Praesent tellus lorem, venenatis fringilla facilisis sit amet, tempor eu augue. 
         </section>  
 
         <section class="sec__product">
-            <h3>Section Product</h3>
+            
+            <div class="container">
+                <div class="product__header wrapper__title mb-5">
+                    <h1>Section Product</h1>
+                    <div class="divider"></div>
+                </div>
+
+            <div class="product__grid swiffy-slider slider-item-show3 slider-nav-square slider-nav-page slider-nav-outside-expand">
+                <ul class="product__list slider-container">
+                    <li class="product__unity">
+                        <div class="product__card card border-0">
+                            <div class="ratio ratio-1x1">
+                                <img src="img/shoes/shoe1.webp" class="product__img card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-0 pt-2">
+                                <div class="d-flex">
+                                    <h3 class="product__title flex-grow-1 h5">LeBron 18</h3>
+                                    <p class="product__price px-2">$200</p>
+                                </div>
+                                <p class="product__info card-text">Basketball Shoes</p>
+                                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-cart-plus"></i> Add To Cart</button>
+                                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-eye"></i> See details</button>
+                                    <button type="button" class="btn btn-outline-primary"><i class="bi bi-bag-heart"></i> Favorite</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card border-0">
+                            <div class="ratio ratio-1x1">
+                                <img src="img/shoes/shoe2.webp" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-0 pt-2">
+                                <div class="d-flex">
+                                    <h3 class="flex-grow-1 h5">Nike Air Vapormax 2021 FK</h3>
+                                    <p class="px-2">$200</p>
+                                </div>
+                                <p class="card-text">Women's Shoes</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card border-0">
+                            <div class="ratio ratio-1x1">
+                                <img src="img/shoes/shoe3.webp" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-0 pt-2">
+                                <div class="d-flex">
+                                    <h3 class="flex-grow-1 h5">Nike Air Force 1 Fontanka</h3>
+                                    <p class="px-2">$110</p>
+                                </div>
+                                <p class="card-text">Women's Shoes</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card border-0">
+                            <div class="ratio ratio-1x1">
+                                <img src="img/shoes/shoe4.webp" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-0 pt-2">
+                                <div class="d-flex">
+                                    <h3 class="flex-grow-1 h5">Kyrie 7</h3>
+                                    <p class="px-2">$130</p>
+                                </div>
+                                <p class="card-text">Basketball Shoes</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card border-0">
+                            <div class="ratio ratio-1x1">
+                                <img src="img/shoes/shoe5.webp" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-0 pt-2">
+                                <div class="d-flex">
+                                    <h3 class="flex-grow-1 h5">Kyrie 7</h3>
+                                    <p class="px-2">$110</p>
+                                </div>
+                                <p class="card-text">Big Kids' Basketball Shoes</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="card border-0">
+                            <div class="ratio ratio-1x1">
+                                <img src="img/shoes/shoe6.webp" class="card-img-top" loading="lazy" alt="...">
+                            </div>
+                            <div class="card-body p-0 pt-2">
+                                <div class="d-flex">
+                                    <h3 class="flex-grow-1 h5">Nike Air Max 90 Premium</h3>
+                                    <p class="px-2">$130</p>
+                                </div>
+                                <p class="card-text">Men's Shoes</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            
+                <button type="button" class="slider-nav" aria-label="Go left"></button>
+                <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+            </div><!-- swiffy-slider -->
+            </div><!-- container -->
+
         </section>  
 
         <section class="sec__category">
