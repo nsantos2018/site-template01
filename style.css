@@ -522,8 +522,37 @@
     font-size: .8rem;
 }
 
-/* Sec 
+/* sec__category 
 ------------------------------------------------------------*/
+.sec__category{
+    background-color: #f1f1f1;
+    padding: 4rem 0;
+}
+
+.category__list{
+    /* justify-content: center; */
+}
+
+.category__unity{
+
+}
+
+.category__title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.category__title a{
+    color: #333;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.category__title a:hover{
+    color: #0d6efd;
+    text-decoration: none;
+    transition: all .3s;
+}
 
 /* Sec 
 ------------------------------------------------------------*/
