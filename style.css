@@ -713,6 +713,77 @@
     padding: 2rem 0;
 }
 
+/* Sec Customer
+------------------------------------------------------------*/
+.sec__customer{
+    background-color: #eee;
+    padding: 4rem 0;
+}
+
+.customer__grid{
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+}
+
+.customer__list{}
+.customer__unity{}
+.customer__img{}
+.customer__img:hover{}
+
+
+/* Sec Partner
+------------------------------------------------------------*/
+.sec__partner{
+    background-color: #fff;
+    padding: 4rem 0;
+}
+
+.partner__grid{
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+/* Sec Team
+------------------------------------------------------------*/
+.sec__team{
+    padding: 4rem 0;
+}
+
+.team__grid{
+
+}
+.team__list{}
+.team__list{}
+.team__content{}
+.team__img{
+    display: flex;
+    justify-content: center;
+}
+
+.team__name{
+    font-size: 1.1rem;
+    font-family: var(--font-title);
+}
+
+.team__networks{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #eee;
+    border-top: none;
+    font-size: 1.5rem;
+}
+
+.team__instagram{}
+
+/* .team__instagram a{
+    color: #fff;
+    text-decoration: none;
+} */
+
+
+/* Sec 
+------------------------------------------------------------*/
+
 /* Sec 
 ------------------------------------------------------------*/
 
@@ -897,9 +968,42 @@
         padding: 0.1rem;         
     }
 
-      /* Sec Category
+    /* Sec Category
     -----------------------*/
     .category__title{
         font-size: 1rem;
     }
-}
+
+    /* Sec Customer
+    -----------------------*/
+    .customer__img{
+        max-width: 70% !important;
+        transition: .3s;
+    }
+    
+    .customer__img:hover{      
+        opacity: 0.8;
+        transition: .3s;
+    }
+
+
+    /* Sec Partner
+    -----------------------*/
+    .partner__img{  
+        max-width: 70% !important;
+        transition: .3s;
+    }
+    
+    .partner__img:hover{      
+        opacity: 0.8;
+        transition: .3s;
+    }
+
+    /* Sec Team
+    -----------------------*/
+    .team__networks{ 
+        font-size: 1.1rem;
+    }
+
+
+}/* end min-width: 1200px */
