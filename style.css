@@ -38,8 +38,8 @@
 }
 
 .fully__page{
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    /* display: grid; 
+    grid-template-rows: auto 1fr auto;*/
 }
 
 .fully__page main{
@@ -781,13 +781,31 @@
 } */
 
 
-/* Sec 
+/* sec__testimony
 ------------------------------------------------------------*/
+.sec__testimony{
+    background-color: #eee;
+    padding: 4rem 0;
+}
 
-/* Sec 
+.testimony__grid{
+    
+}
+
+.testimony__list{
+
+}
+.testimony__unity{
+
+}
+
+/* sec__instagram
 ------------------------------------------------------------*/
+.sec__instagram{
+    padding: 4rem 0;
+}
 
-/* Sec 
+/* Sec Footer
 ------------------------------------------------------------*/
 
 .footer__main{
@@ -1003,6 +1021,13 @@
     -----------------------*/
     .team__networks{ 
         font-size: 1.1rem;
+    }
+
+    /* sec__testimony
+    ------------------------------------------------------------*/ 
+    .testimony__grid{
+        width: 80%;
+        margin: 0 auto;
     }
 
 
